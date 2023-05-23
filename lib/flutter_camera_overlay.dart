@@ -79,7 +79,7 @@ class _FlutterCameraOverlayState extends State<CameraOverlay> {
       alignment: Alignment.bottomCenter,
       fit: StackFit.expand,
       children: [
-        SizedBox(height: 500, child: CameraPreview(controller)),
+        CameraPreview(controller),
         OverlayShape(widget.model),
         if (widget.label != null || widget.info != null)
           Align(
