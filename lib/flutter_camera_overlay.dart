@@ -87,11 +87,13 @@ class _FlutterCameraOverlayState extends State<CameraOverlay> {
             alignment: Alignment.topCenter,
             child: Container(
                 margin: widget.infoMargin ??
-                    const EdgeInsets.only(top: 100, left: 20, right: 20),
+                    const EdgeInsets.only(top: 20, left: 20, right: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const LeadingIcon(),
+                    Container(
+                        padding: const EdgeInsets.only(bottom: 15),
+                        child: const LeadingIcon()),
                     if (widget.label != null)
                       Text(
                         widget.label!,
